@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "GitHub Appsを用いたTOKENを用いて、GitHub Actionsでよしなにやる.md",
+            "file": "articles/ef93bddd0e3094.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GitHub Appsを用いたTOKENを用いて、GitHub Actionsでよしなにやる.md",
+                "file": "articles/ef93bddd0e3094.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "f27af394fd6cc6a4",
   "lastOpenFiles": [
-    "GitHub Appsを用いたTOKENを用いて、GitHub Actionsでよしなにやる.md"
+    "articles/ef93bddd0e3094.md",
+    "articles/ef93bddd0e3094.md.md"
   ]
 }

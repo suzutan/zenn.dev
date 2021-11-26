@@ -1,3 +1,9 @@
 {
-  "recommendations": ["mushan.vscode-paste-image"]
+  "recommendations": [
+    "mushan.vscode-paste-image",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "bierner.markdown-emoji",
+    "bierner.markdown-checkbox"
+  ]
 }

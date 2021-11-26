@@ -1,0 +1,5 @@
+# markdownlint rules: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+# sample .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+
+# MD045/no-alt-text - Images should have alternate text (alt text)
+MD045: false

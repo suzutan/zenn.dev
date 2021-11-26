@@ -39,28 +39,28 @@ https://github.com/organizations/org_name/settings/apps/new より、GitHub Apps
 
 App Name と Homepage URL は任意のものを入れる
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045245.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045245.png)
 
 Permission については、
 
 - (GitHub Actions が Private repository 上で実行される場合)　`Repository permissions -> Administration` を `Read-only` に設定する
-  - ![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045149.png)
+  - ![](/images/how-to-use-github-apps-token-in-github-actions/20211127045149.png)
 - その他については、GitHub Actions 上で行いたい操作に基づいて権限を設定する
   - org member を管理したい場合は、 `Organization permissions -> Members` など。
 
 `Where can this GitHub App be installed?` については、自 org でのみ使えれば良いので `Only on this account` を選択する。
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045414.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045414.png)
 
 ## Organization に、作成した GitHub Apps をインストールする
 
 GitHub App を作成したら、左のメニューにある `Install App` に行き、Install ボタンを押して Organization にインストールする.
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045621.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045621.png)
 
 どのリポジトリを read させるかは任意で。
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045650.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045650.png)
 
 ## GitHub Apps を操作するための Private key を発行する
 
@@ -68,11 +68,11 @@ GitHub Apps で token 取得を行うために、Private key を発行する必�
 
 GitHub Apps の General 項目を下にたどると、 `Private keys` 項目があるので、 `Generate a private key`で秘密鍵を作成する。
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045831.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045831.png)
 
 できたやつ
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127045851.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127045851.png)
 
 ## GitHub Apps の App ID と、発行した Private Key を取得し、secrets に登録する
 
@@ -80,12 +80,12 @@ GitHub Apps の General 項目を下にたどると、 `Private keys` 項目が�
 
 `Organization secrets` か `Repository secrets` かは任せるが、とにかく Secret を登録する。
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127050101.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127050101.png)
 
 - APP_ID: 154715
 - PRIVATE_KEY: `-----BEGIN RSA PRIVATE KEY-----` で始まる複数行
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127050203.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127050203.png)
 
 ## GitHub Actions 上で token を取得する
 
@@ -127,7 +127,7 @@ jobs:
 
 `uses: tibdex/github-app-token@v1` の output に token が格納されるため、 `${{ steps.generate_token.outputs.token }}` とかで token を持ってきて、任意の認証に使えばよい。
 
-![](/images/how-to-use-github-apps-token-in-github-actions/Pasted%20image%2020211127051620.png)
+![](/images/how-to-use-github-apps-token-in-github-actions/20211127051620.png)
 
 ## さいごに
 
